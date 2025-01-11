@@ -7,6 +7,9 @@ namespace Fuyu.Backend.BSG.Models.Chat;
 [DataContract]
 public class ChatMessage
 {
+    [IgnoreDataMember]
+    public MongoId TargetSession { get; set; }
+
     [DataMember(Name = "_id")]
     public MongoId Id { get; set; }
 
